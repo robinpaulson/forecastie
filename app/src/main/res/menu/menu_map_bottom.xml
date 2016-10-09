@@ -12,4 +12,8 @@
         android:id="@+id/map_temperature"
         android:icon="@drawable/ic_thermometer_grey600_24dp"
         android:title="@string/temperature" />
+    <item
+        android:id="@+id/map_pressure"
+        android:icon="@drawable/ic_pressure_grey600_24dp"
+        android:title="@string/pressure" />
 </menu>
