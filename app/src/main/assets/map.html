@@ -67,6 +67,13 @@
         maxZoom: 15
     });
     tempLayer.setOpacity(0.7);
+
+    // Pressure
+    var tempLayer = new L.TileLayer("http://{s}.maps.owm.io:8099/<apikey>/{z}/{x}/{y}?hash=<apikey>", {
+        minZoom: 1,
+        maxZoom: 15
+    });
+    tempLayer.setOpacity(0.7);
 </script>
 
 </body>
