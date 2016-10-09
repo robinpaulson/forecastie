@@ -34,12 +34,13 @@ public class MapActivity extends AppCompatActivity {
         mBottomBar.setOnMenuTabClickListener(new OnMenuTabClickListener() {
             @Override
             public void onMenuTabSelected(@IdRes int menuItemId) {
-                if (menuItemId == R.id.map_rain) {
-                    webView.loadUrl("javascript:map.removeLayer(windLayer);map.removeLayer(tempLayer);map.addLayer(rainLayer);");
+                    webView.loadUrl("javascript:map.removeLayer(windLayer);map.removeLayer(tempLayer);map.removeLayer(pressureLayer);map.addLayer(rainLayer);");
                 } else if (menuItemId == R.id.map_wind) {
-                    webView.loadUrl("javascript:map.removeLayer(rainLayer);map.removeLayer(tempLayer);map.addLayer(windLayer);");
+                    webView.loadUrl("javascript:map.removeLayer(rainLayer);map.removeLayer(tempLayer);map.removeLayer(pressureLayer);map.addLayer(windLayer);");
                 } else if (menuItemId == R.id.map_temperature) {
-                    webView.loadUrl("javascript:map.removeLayer(windLayer);map.removeLayer(rainLayer);map.addLayer(tempLayer);");
+                    webView.loadUrl("javascript:map.removeLayer(windLayer);map.removeLayer(rainLayer);map.removeLayer(pressureLayer);map.addLayer(tempLayer);");
+                } else if (menuItemId == R.id.map_pressure) {
+                    webView.loadUrl("javascript:map.removeLayer(windLayer);map.removeLayer(rainLayer);map.removeLayer(tempLayer);map.addLayer(pressureLayer);");
                 }
             }
 
